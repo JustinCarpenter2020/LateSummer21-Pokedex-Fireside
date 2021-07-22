@@ -1,6 +1,23 @@
 /* BASIC STYLES HERE */
 
 
-body{
+.red{
   background-color:  #ff0000;
+}
+
+.blue{
+  background-color: #2a75bb;
+}
+
+.main-row{
+  height: 60vh;
+}
+
+.white-border{
+  border: solid 2px white;
+}
+
+.card-height{
+  height: 50vh;
+  overflow-y: scroll;
 }
