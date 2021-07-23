@@ -1,4 +1,4 @@
-import { pokeApi } from "./AxiosService.js";
+import { bcwApi, pokeApi } from "./AxiosService.js";
 import { ProxyState } from "../AppState.js";
 import Pokemon from "../Models/Pokemon.js";
 
@@ -16,6 +16,11 @@ class PokemonService {
     const res = await pokeApi.get("pokemon?limit=100")
     ProxyState.wildPokemon = res.data.results
     console.log(ProxyState.wildPokemon)
+  }
+
+  async postToSandbox(){
+    const res = await bcwApi.post('pokemon', ProxyState.activePokemon)
+    console.log(new Pokemon(res.data))
   }
 
 

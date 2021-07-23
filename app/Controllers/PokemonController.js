@@ -28,6 +28,12 @@ export default class PokemonController{
     }
   }
 
+  postToSandbox(){
+    pokemonService.postToSandbox()
+  }
+
+
+
 
   async setActivePokemon(name){
     try {
